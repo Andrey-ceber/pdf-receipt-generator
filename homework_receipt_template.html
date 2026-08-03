@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Чек {{ product }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #111;
+            margin: 32px;
+        }
+
+        .receipt {
+            max-width: 680px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            padding: 24px;
+        }
+
+        h1 {
+            margin: 0 0 16px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th,
+        td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+            overflow-wrap: anywhere;
+        }
+
+        .total {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <main class="receipt">
+        <h1>Товарный чек</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Товар</th>
+                    <th>Цена</th>
+                    <th>Количество</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ product }}</td>
+                    <td>{{ price }}</td>
+                    <td>{{ qty }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">Итого: {{ total }}</div>
+    </main>
+</body>
+</html>

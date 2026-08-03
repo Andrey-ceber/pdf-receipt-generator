@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+
+output/
+output_*/
+
+.env
+.DS_Store
+Thumbs.db
+
+_docx_extracted_text.txt
+*.docx
+*.doc

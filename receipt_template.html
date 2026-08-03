@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Чек {{receipt_number}}</title>
+    <style>
+        body {
+            color: #111;
+        }
+
+        .receipt {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            border-bottom: 2px solid #111;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 22pt;
+        }
+
+        .meta {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .section {
+            margin: 14px 0;
+        }
+
+        .label {
+            font-weight: 700;
+        }
+
+        .total {
+            margin-top: 18px;
+            text-align: right;
+            font-size: 15pt;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <main class="receipt">
+        <section class="header">
+            <div>
+                <h1>Товарный чек</h1>
+                <div>ООО "Пример"</div>
+                <div>ИНН 7700000000</div>
+            </div>
+            <div class="meta">
+                <div><span class="label">№:</span> {{receipt_number}}</div>
+                <div><span class="label">Дата:</span> {{date}}</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div><span class="label">Покупатель:</span> {{customer}}</div>
+        </section>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Товар</th>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                    <th>Сумма</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{product}}</td>
+                    <td>{{quantity}}</td>
+                    <td>{{price}}</td>
+                    <td>{{total}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total">Итого к оплате: {{total}}</div>
+    </main>
+</body>
+</html>

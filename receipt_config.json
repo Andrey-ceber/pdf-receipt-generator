@@ -1,0 +1,16 @@
+{
+  "previous_directories": [
+    "."
+  ],
+  "last_template": "homework_receipt_template.html",
+  "last_csv": "homework_products.csv",
+  "output_dir": "output",
+  "placeholder_mapping": {
+    "product": "product",
+    "price": "price",
+    "qty": "qty",
+    "total": "total"
+  },
+  "placeholder_constants": {},
+  "filename_column": null
+}
